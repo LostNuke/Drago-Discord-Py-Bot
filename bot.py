@@ -32,6 +32,20 @@ async def ping(ctx):
 async def say(ctx, *, msg):
     await ctx.send(f"{msg}")
 
+# Say Command
+# >punch <user>
+
+@client.command()
+async def punch(ctx):
+    if(ctx.message.mentions and ctx.message.mentions[0].id != ctx.author.id):
+        punchEmbed = discord.Embed(title="Punch a User", description = f"User {ctx.author.mention} punched {ctx.message.mentions[0].mention}")
+        punchEmbed.set_image(url="https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446")
+        await ctx.send(embed=punchEmbed)
+    else:
+        punchEmbed = discord.Embed(title="Punch a User", description = f"User {ctx.author.mention} punched himself... just fucking... WHY!?")
+        punchEmbed.set_image(url="https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446")
+        await ctx.send(embed=punchEmbed)
+
 # Choose Command
 # >choose <args1> <args2> [...]
 
@@ -135,5 +149,6 @@ async def coinflip(ctx):
 
 # Boa I swear to god 👁️👄👁️
 # hehe 👁️👄👁️
+# Shut yo stoopid Mouth yall I stg
 
-client.run()
+client.run("NjQ5MzcxNDcwMzMzNDc2ODY0.XxT3-Q.7zQE-eNnyBeFR01Ukp8aPW3492U")
