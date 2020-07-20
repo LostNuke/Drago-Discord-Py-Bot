@@ -169,4 +169,4 @@ async def coinflip(ctx):
 # hehe 👁️👄👁️
 # Shut yo stoopid Mouth yall I stg
 
-client.run("NjQ5MzcxNDcwMzMzNDc2ODY0.XxT3-Q.7zQE-eNnyBeFR01Ukp8aPW3492U")
+client.run()
