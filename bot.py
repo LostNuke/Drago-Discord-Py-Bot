@@ -40,10 +40,28 @@ async def punch(ctx):
     if(ctx.message.mentions and ctx.message.mentions[0].id != ctx.author.id):
         punchEmbed = discord.Embed(title="Punch a User", description = f"User {ctx.author.mention} punched {ctx.message.mentions[0].mention}")
         punchEmbed.set_image(url="https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446")
+        punchEmbed.set_footer(text="I stole your toes")
         await ctx.send(embed=punchEmbed)
     else:
-        punchEmbed = discord.Embed(title="Punch a User", description = f"User {ctx.author.mention} punched himself... just fucking... WHY!?")
+        punchEmbed = discord.Embed(title="Punch a User", description = f"User {ctx.author.mention} punched themselves... just fucking... WHY!?")
         punchEmbed.set_image(url="https://media1.tenor.com/images/31686440e805309d34e94219e4bedac1/tenor.gif?itemid=4790446")
+        punchEmbed.set_footer(text="I stole your toes")
+        await ctx.send(embed=punchEmbed)
+
+# Say Command
+# >kiss <user>
+
+@client.command()
+async def kiss(ctx):
+    if(ctx.message.mentions and ctx.message.mentions[0].id != ctx.author.id):
+        punchEmbed = discord.Embed(title="Kiss a User", description = f"User {ctx.author.mention} kissed {ctx.message.mentions[0].mention}")
+        punchEmbed.set_image(url="https://media1.tenor.com/images/d307db89f181813e0d05937b5feb4254/tenor.gif?itemid=16371489")
+        punchEmbed.set_footer(text="I stole your toes")
+        await ctx.send(embed=punchEmbed)
+    else:
+        punchEmbed = discord.Embed(title="Kiss a User", description = f"User {ctx.author.mention} kissed themselves... I... really dunno how...")
+        punchEmbed.set_image(url="https://media1.tenor.com/images/d307db89f181813e0d05937b5feb4254/tenor.gif?itemid=16371489")
+        punchEmbed.set_footer(text="I stole your toes")
         await ctx.send(embed=punchEmbed)
 
 # Choose Command
